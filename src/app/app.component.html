@@ -1,0 +1,70 @@
+<section>
+	<mat-sidenav-container hasBackdrop="true">
+
+		<mat-sidenav #snav mode="'over'" [fixedInViewport]="true">
+			<!--MENU ITEMS =====================1=============  -->
+			<mat-nav-list>
+				<mat-list-item routerLink="/home" (click)="close()">
+					<mat-icon matListIcon>home</mat-icon>
+					Home
+				</mat-list-item>
+				<mat-list-item routerLink="/add" (click)="close()">
+					<mat-icon matListIcon>add</mat-icon>
+					Add
+				</mat-list-item>
+				<mat-list-item routerLink="/list" (click)="close()">
+					<mat-icon matListIcon>list</mat-icon>
+					List
+				</mat-list-item>
+				<mat-list-item routerLink="/add" (click)="close()">
+					<mat-icon matListIcon>Files</mat-icon>
+					file
+				</mat-list-item>
+				<mat-list-item (click)="snav.close()">
+					<mat-icon matListIcon>cancel</mat-icon>
+					Close
+				</mat-list-item>
+			</mat-nav-list>
+
+		</mat-sidenav>
+
+
+		<mat-sidenav-content>
+			<!-- ROUTER -->
+			<router-outlet>
+				<!----------this is where the content of each component appears!!!----------->
+			</router-outlet>
+			<!-- end router -->
+		</mat-sidenav-content>
+
+	</mat-sidenav-container>
+
+
+	<!----------TOP NAV BAR----------->
+	<mat-toolbar color="primary" class="topBar">
+		<div fxHide.gt-xs>
+			<button mat-icon-button (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+		</div>
+		<div fxFlex> </div>
+		<div fxFlex>
+			APPLICATION NAME
+		</div>
+		<div fxFlex> </div>
+		<div fxHide.xs>
+		</div>
+	</mat-toolbar>
+	<!-- end top nav bar-->
+
+
+
+	<!---------FOOTER------------->
+	<mat-toolbar color="primary" class="footer">
+		<div class="footerMenu">
+			footer
+		</div>
+	</mat-toolbar>
+	<!-- end footer-->
+
+	<section>

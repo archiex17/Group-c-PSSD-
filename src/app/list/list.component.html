@@ -1,0 +1,37 @@
+<!--Lists all names in the database-->
+<h1>LIST PAGE </h1>
+
+<table border='1' width="95%" class="table">
+  <tr bgcolor='#363540'>
+    <td width='40%'> Name
+    </td>
+    <td width='30%'> Phone 
+  </td>
+    <td width='20%' align=center> Edit
+    </td>
+  </tr>
+  <tr *ngFor="let item of people; let i=index">
+    <td>
+      {{item.fName}} {{item.lName}}
+    </td>
+    <td>
+    {{item.phone}} 
+  </td>
+    <td>
+      <button mat-icon-button  [routerLink]="['/edit', i]">       
+        <mat-icon>link</mat-icon>  
+      </button>
+      <button mat-icon-button color="warn"  (click) = openDialog(i) >
+        <mat-icon>delete</mat-icon> 
+      </button>
+    </td>
+  </tr>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

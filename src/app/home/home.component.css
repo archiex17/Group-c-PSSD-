@@ -1,0 +1,22 @@
+
+.box {
+    padding: 10px;
+    margin:2px;
+    width:50%;
+    vertical-align: middle;
+
+}
+
+a:link {
+  color: coral;
+}
+
+/* visited link */
+a:visited {
+    color: red;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}

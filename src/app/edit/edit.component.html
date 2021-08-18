@@ -1,0 +1,56 @@
+
+     <h1> EDIT </h1>
+ 
+
+<div  fxLayout="row wrap" >
+	
+ <p class="edit-submitted-message">
+		{{message}} <br>
+		<button mat-button [routerLink]="['/list']" [ngClass]="[bntStyle]" color="primary">Back</button>
+       </p>
+	<div class="col" fxLayout="row wrap">
+		<h3> EDIT</h3>
+
+	<form  [formGroup]="peopleForm" (ngSubmit)="submitEdit()">
+
+					<div>
+             <strong>  First Name : </strong>
+						<mat-form-field>
+							<input matInput formControlName="fName">
+						</mat-form-field>
+					</div>
+					<div >
+						<strong>  	Last Name :</strong>
+						<mat-form-field>
+							<input matInput formControlName="lName">
+						</mat-form-field>
+					</div> 
+					<div >
+					<strong>  	Phone :</strong>
+					<mat-form-field>
+						<input matInput formControlName="phone">
+					</mat-form-field>
+				</div> 
+				<br>
+
+				<button type="submit" mat-raised-button color="warn">Submit</button>
+        
+			</form>
+
+	</div>
+
+
+
+</div>
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
